@@ -1,0 +1,13 @@
+from django.contrib import admin
+from django.urls import path
+from blog import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+
+    path('', views.inicio, name='inicio'),
+    path('autor/', views.crear_autor, name='crear_autor'),
+    path('categoria/', views.crear_categoria, name='crear_categoria'),
+    path('post/', views.crear_post, name='crear_post'),
+    path('buscar/', views.buscar_post, name='buscar_post'),
+]
